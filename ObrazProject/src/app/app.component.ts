@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
+//import { FirstCompComponent } from './components/first-comp/first-comp.component'
 
 @Component({
   selector: 'app-root',

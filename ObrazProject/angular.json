@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ObrazProject"
+    }
+  },
+  "defaultProject": "ObrazProject",
+  "cli": {
+    "analytics": "47532997-bd53-414a-842e-dd854ad39628"
+  }
 }

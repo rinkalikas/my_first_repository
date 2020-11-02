@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LessonsService } from 'src/app/lessons.service';
 
 @Component({
   selector: 'app-first-comp',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstCompComponent implements OnInit {
 
-  constructor() { }
+public lessons: any[]
+
+  constructor(private lessonsService: LessonsService) {  }
 
   ngOnInit(): void {
+    this.lessons = this.lessonsService.getLessons();
   }
 
 }
