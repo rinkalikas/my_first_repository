@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/auth.service';
 import { LessonsService } from 'src/app/lessons.service';
 
 @Component({
@@ -9,11 +10,13 @@ import { LessonsService } from 'src/app/lessons.service';
 export class FirstCompComponent implements OnInit {
 
 public lessons: any[]
+public autService;
 
-  constructor(private lessonsService: LessonsService) {  }
+  constructor(private lessonsService: LessonsService, private authService: AuthService) {  }
 
   ngOnInit(): void {
     this.lessons = this.lessonsService.getLessons();
+    this.autService = this.authService;
   }
 
 }
