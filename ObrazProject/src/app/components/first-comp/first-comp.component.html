@@ -1,9 +1,7 @@
 <!-- <p>hello comp 1</p> -->
-<button (click)="this.autService.logIn()">Авторизаця</button><br><br>
+<button (click)="this.autService.logIn()">Авторизация</button><br><br>
 
-<a routerLink="/content">Подробнее</a>
+<!-- <a routerLink="/content">Подробнее</a> -->
 <div *ngFor="let lesson of lessons">
-    <h3>{{lesson.title}}</h3>
-    <p>{{lesson.description}}</p>
-    <p>{{lesson.time}}</p>
+    <a routerLink="/content" (click)="this.lessonService.setLessonId(lesson.id)">{{lesson.title}}</a>
 </div>

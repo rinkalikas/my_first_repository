@@ -12,7 +12,7 @@ const routes: Routes = [
   {
     path : 'content',
     component : SecondCompComponent,
-    canActivate : [AuthGuard]
+    // canActivate : [AuthGuard]
   }
 ];
 

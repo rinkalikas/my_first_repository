@@ -1,8 +1,6 @@
 <!-- <p>hello comp 2</p> -->
-..._...|..____________________, , <br>
-....../ `---___________----_____|] <br>
-...../_==o;;;;;;;;_______.:/ <br>
-.....), ---.(_(__) / <br>
-....// (..) ), ----" <br>
-...//___// <br>
-..//___// <br>
+<div>
+    <h3>{{lessons[lessonsId].title}}</h3>
+    <p>{{lessons[lessonsId].description}}</p>
+    <p *ngIf="this.autService.getIsUserAuth">{{lessons[lessonsId].time}}</p>
+</div>

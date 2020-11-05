@@ -11,12 +11,14 @@ export class FirstCompComponent implements OnInit {
 
 public lessons: any[]
 public autService;
+public lessonService;
 
   constructor(private lessonsService: LessonsService, private authService: AuthService) {  }
 
   ngOnInit(): void {
     this.lessons = this.lessonsService.getLessons();
     this.autService = this.authService;
+    this.lessonService = this.lessonsService;
   }
 
 }
