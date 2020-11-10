@@ -10,6 +10,8 @@ import { LessonsService } from 'src/app/lessons.service';
 export class FirstCompComponent implements OnInit {
 
 public lessons: any[]
+  // Лучше не создавать переменные с сервисами, а создать метод в компоненте, который будет вызывать сервис
+  // Например logIn() { this.authService.logIn() }
 public autService;
 public lessonService;
 

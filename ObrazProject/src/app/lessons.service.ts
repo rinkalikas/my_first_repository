@@ -5,12 +5,15 @@ import { Injectable } from '@angular/core';
 })
 export class LessonsService {
 
+  // Лучше именовать более подробно, а то непонятно без контекста, что это за id
+  // Например currentLessonId
   private lessonId;
 
   get getLessonId() {
     return this.lessonId
   }
 
+  // Лучше сделать передачу параметра через url, всё-таки задание было именно про routing
   setLessonId(lessonIdValue) {
     this.lessonId = lessonIdValue
   }
