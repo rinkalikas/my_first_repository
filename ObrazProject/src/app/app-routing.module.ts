@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AddLessonComponent } from './add-lesson/add-lesson.component';
 import { AuthGuard } from './auth.guard';
 import { FirstCompComponent } from './components/first-comp/first-comp.component';
 import { SecondCompComponent } from './second-comp/second-comp.component';
@@ -12,7 +13,10 @@ const routes: Routes = [
   {
     path : 'content',
     component : SecondCompComponent,
-    // canActivate : [AuthGuard]
+  },
+  {
+    path : 'add_lesson',
+    component : AddLessonComponent,
   }
 ];
 

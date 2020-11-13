@@ -10,16 +10,16 @@ import { LessonsService } from 'src/app/lessons.service';
 export class FirstCompComponent implements OnInit {
 
 public lessons: any[]
-  // Лучше не создавать переменные с сервисами, а создать метод в компоненте, который будет вызывать сервис
-  // Например logIn() { this.authService.logIn() }
-public autService;
 public lessonService;
+
+logIn() { 
+  this.authService.logIn() 
+}
 
   constructor(private lessonsService: LessonsService, private authService: AuthService) {  }
 
   ngOnInit(): void {
     this.lessons = this.lessonsService.getLessons();
-    this.autService = this.authService;
     this.lessonService = this.lessonsService;
   }
 

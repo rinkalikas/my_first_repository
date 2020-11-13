@@ -5,16 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstCompComponent } from './components/first-comp/first-comp.component';
 import { SecondCompComponent } from './second-comp/second-comp.component';
+import { AddLessonComponent } from './add-lesson/add-lesson.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstCompComponent,
-    SecondCompComponent
+    SecondCompComponent,
+    AddLessonComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
