@@ -22,5 +22,4 @@ logIn() {
     this.lessons = this.lessonsService.getLessons();
     this.lessonService = this.lessonsService;
   }
-
 }
