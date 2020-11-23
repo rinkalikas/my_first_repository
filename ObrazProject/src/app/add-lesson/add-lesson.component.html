@@ -1,12 +1,12 @@
-<a routerLink="/">← Вернуться на главную</a><br><br>
+<a [routerLink]="['/']">← Вернуться на главную</a><br><br>
 
 <form [formGroup]="addLessonForm" (ngSubmit)="this.onSubmit()">
-  
+
     <label>
       Название курса:<br>
       <input type="text" formControlName="lessonTitle">
     </label><br><br>
-  
+
     <label>
       Описание курса:<br>
       <input type="text" formControlName="lessonDescription">
@@ -18,5 +18,5 @@
     </label><br><br>
 
     <button type="submit" [disabled]="!addLessonForm.valid">Добавить</button>
-  
+
   </form>
