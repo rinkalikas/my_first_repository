@@ -6,7 +6,7 @@ import { SecondCompComponent } from './second-comp.component';
 describe('SecondCompComponent', () => {
   let component: SecondCompComponent;
   let fixture: ComponentFixture<SecondCompComponent>;
-  // let lessonsService = jasmine.createSpyObj('LessonsService', )
+  let lessonsService = jasmine.createSpyObj('LessonsService', )
   let service: LessonsService 
 
   beforeEach(async () => {
@@ -20,15 +20,15 @@ describe('SecondCompComponent', () => {
     fixture = TestBed.createComponent(SecondCompComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-     TestBed.configureTestingModule({
-       providers:[{
-         provide: LessonsService, useValue: service
-       }]
-     })
+    TestBed.configureTestingModule({
+      providers:[{
+      provide: LessonsService, useValue: service
+      }]
+    })
     service = TestBed.inject(LessonsService)
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+   it('should create', () => {
+     expect(component).toBeTruthy();
+   });
 });
