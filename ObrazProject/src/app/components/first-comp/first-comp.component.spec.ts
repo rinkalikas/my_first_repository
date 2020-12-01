@@ -22,4 +22,14 @@ describe('FirstCompComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('add course button should exist', () => {
+    const button = fixture.nativeElement.querySelector('#add_course_button')
+    expect(button.textContent).toEqual('Добавить курс')
+  });
+
+  it('login button should exist', () => {
+    const button = fixture.nativeElement.querySelector('#login_button')
+    expect(button.textContent).toEqual('Авторизация')
+  });
 });

@@ -1,13 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { LessonsService } from '../lessons.service';
-
 import { SecondCompComponent } from './second-comp.component';
 
 describe('SecondCompComponent', () => {
   let component: SecondCompComponent;
   let fixture: ComponentFixture<SecondCompComponent>;
-  let lessonsService = jasmine.createSpyObj('LessonsService', )
-  let service: LessonsService 
+  let authService = jasmine.createSpyObj('AuthService', ['getIsUserAuth'])
+  let lessonService = jasmine.createSpyObj('LessonsService', ['getLessonId'], ['getLessons'])
+
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -20,15 +19,15 @@ describe('SecondCompComponent', () => {
     fixture = TestBed.createComponent(SecondCompComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-    TestBed.configureTestingModule({
-      providers:[{
-      provide: LessonsService, useValue: service
-      }]
-    })
-    service = TestBed.inject(LessonsService)
   });
 
-   it('should create', () => {
-     expect(component).toBeTruthy();
-   });
+  //  describe('user is authorized', () => {
+  //    it('course time should exist', () => {
+  //      authService.getIsUserAuth = jasmine.createSpy().and.returnValue(true)
+  //      lessonService.getLessonId = jasmine.createSpy().and.returnValue(1)
+  //      lessonService.getLessons = jasmine.createSpy().and.returnValue({id:1, title: 'Название курса', description: 'Описание курса', time: 'Длительность курса'})
+  //      const time = fixture.nativeElement.querySelector('.course_time')
+  //      expect(time).toBeTruthy()
+  //    });
+  //  })
 });

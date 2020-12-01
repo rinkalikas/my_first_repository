@@ -3,5 +3,5 @@
 <div>
     <h3>{{lessons[lessonsId].title}}</h3>
     <p>{{lessons[lessonsId].description}}</p>
-    <p *ngIf="this.autService.getIsUserAuth">{{lessons[lessonsId].time}}</p>
+    <p class="course_time" *ngIf="this.autService.getIsUserAuth">{{lessons[lessonsId].time}}</p>
 </div>
