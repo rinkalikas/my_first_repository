@@ -12,7 +12,8 @@ export class AuthService {
   logOut() {
     this.isUserAuth = false
   }
-  get getIsUserAuth() {
+
+  getIsUserAuth() {
     return this.isUserAuth
   }
 }

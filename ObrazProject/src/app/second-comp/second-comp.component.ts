@@ -18,7 +18,7 @@ constructor(private lessonsService: LessonsService, private authService: AuthSer
   ngOnInit(): void {
     this.lessons = this.lessonsService.getLessons();
     this.autService = this.authService;
-    this.lessonsId = this.lessonsService.getLessonId;
+    this.lessonsId = this.lessonsService.getLessonId();
   }
 
 }

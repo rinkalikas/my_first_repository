@@ -21,7 +21,7 @@ export class LessonsService {
       time: '6 месяцев'}
   ]
 
-  get getLessonId() {
+  getLessonId() {
     return this.currentLessonId
   }
 

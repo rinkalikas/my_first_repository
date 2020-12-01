@@ -1,7 +1,7 @@
-<a [routerLink]="['/']">← Вернуться на главную</a><br>
+<!--<a [routerLink]="['/']">← Вернуться на главную</a><br>-->
 
 <div>
-    <h3>{{lessons[lessonsId].title}}</h3>
-    <p>{{lessons[lessonsId].description}}</p>
-    <p class="course_time" *ngIf="this.autService.getIsUserAuth">{{lessons[lessonsId].time}}</p>
+    <h3>{{lessons[lessonsId]?.title}}</h3>
+    <p>{{lessons[lessonsId]?.description}}</p>
+    <p class="course_time" *ngIf="this.autService.getIsUserAuth">{{lessons[lessonsId]?.time}}</p>
 </div>
