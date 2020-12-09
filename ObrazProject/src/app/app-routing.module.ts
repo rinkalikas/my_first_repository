@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AddLessonComponent } from './add-lesson/add-lesson.component';
 import { AuthGuard } from './auth.guard';
 import { FirstCompComponent } from './components/first-comp/first-comp.component';
+import { NgrxLessonsComponent } from './ngrx-lessons/ngrx-lessons.component';
 import { SecondCompComponent } from './second-comp/second-comp.component';
 
 const routes: Routes = [
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path : 'add_lesson',
     component : AddLessonComponent,
+  },
+  {
+    path : 'ngrx',
+    component : NgrxLessonsComponent,
   }
 ];
 

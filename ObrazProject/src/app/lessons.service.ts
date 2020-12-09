@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -34,6 +35,10 @@ export class LessonsService {
 
   getLessons() {
     return this.lessonsArray
+  }
+
+  getLessonsAsObs() {
+    return of(this.getLessons())
   }
 
   pushLessons(pushValue) {
